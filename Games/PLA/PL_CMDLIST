@@ -1,0 +1,144 @@
+--ne("CMD", "DESC", false)
+--[[ UPDATE LOGS:
+NOTHING.
+]]--
+local function ne(ti, de, ca)
+    GLOBALADDCMD(ti, de, ca)
+end
+ne("WELCOME", "Its not a bug, its a feature. you will experience bug(s) :D", false)
+ne("prefix [Prefix]", "Changes prefix (Default prefix is: ?)", false) --
+ne("KILL CMDS", false, true) --KILL CMDS
+ne("kill / oof / die [plr,random,team,all]", "Kills a selected player(s)", false) --
+ne("meleekill / mkill [plr,random,team,all]", "Kills a selected player(s) using meleeEvent(s)", false) --
+ne("loopkill / lk [plr,team,all]", "Loops killing player(s)", false) --
+ne("unloopkill / unlk [plr,team,all]", "Stops loop-killing player(s)", false) --
+ne("meleelk / mlk [plr,random,hostiles,team,all]", "Melee-loopkills player(s)", false) --
+ne("unmeleelk / unmlk [plr,hostiles,team,all]", "Stops melee-killing player(s)", false) --
+ne("killaura / kaura [plr,random]", "Other player(s) near the selected player dies",  false) --
+ne("virus / killtouch [plr,random,all]", "Other player(s) who touches the selected player dies", false) --
+ne("unkillaura / unkaura [plr,all]", "Removes killaura(s) from player(s)", false) --
+ne("unvirus / unkilltouch [plr,all]", "Removes antitouch from player(s)", false) --
+ne("tkillaura / tka [team,enemies]", "Killaura but only for a selected team(s), uses meleeEvent(s)", false) --
+ne("untkillaura / untka [team,enemies,all]", "Stops killaura to selected team(s)", false) --
+ne("meleeaura / maura", "Killaura but using meleeEvent(s)", false) --
+ne("meleetouch / mtouch", "Killtouch but using meleeEvent(s)", false) --
+ne("unmeleetouch / unmtouch", "Stops melee-killing players who touch you", false) --
+ne("deathnuke / dnuke [plr,random]", "If that selected player dies, everyone dies", false)
+ne("undeathnuke / undnuke [plr,all]", "Removes deathnuke", false)
+
+ne("ARREST/TAZE CMDS", false, true) -- ARREST AND TAZE COMMANDS
+ne("arrest / ar [plr,random,team,all]", "Arrests selected player(s)", false) --
+ne("tase / ta [plr,random,team,all]", "Taze selected player(s)", false) --
+ne("arrestaura / aaura", "Automatically arrest players near you", false) --
+ne("makecrim / crim [plr,random,team,all]", "Turn selected player(s) to criminal", false) --
+ne("crimpad / cpad [plr,random]", "Teleport selected player to crimpad", false) --
+ne("looptase / lta [plr,random,team,all]", "Loops tase selected player(s)", false) --
+ne("unlooptase / unlta [plr,team,all]", "Stops loop-tasing selected player(s)", false) --
+ne("looparrest / lar [plr,random,team,all]", "Loops arresting selected player(s)", false) --
+ne("autoarrest / autoar [plr,all]", "Automatically arrest player(s) in illegal region", false) --
+ne("unlooparrest / unlar [plr,team,all]", "Stops loop arresting selected player(s)", false) --
+ne("unautoarrest / unaar [plr,all]", "Stops auto-arresting selected player(s)", false) --
+
+ne("ITEMS/GUNS/MOD CMDS", false, true) -- ITEMS AND GUNS COMMANDS
+ne("ak / ak47", "Obtain the gun AK-47", false) --
+ne("remington / shotgun / rem", "Obtain the gun Remington 870", false) --
+ne("m9 / pistol", "Obtain the gun M9", false) --
+ne("m4 / m4a1", "Obtain the gun M4A1 (REQUIRES GAMEPASS)", false) --
+ne("riotshield / shield", "Obtain RiotShield (REQUIRES GAMEPASS AND GUARDS TEAM)", false) --
+ne("skimask / mask", "Puts on ski-mask (REQUIRES GAMEPASS)", false) --
+ne("riothelmet / helmet", "Puts on riot helmet (REQUIRES GAMEPASS)", false) --
+ne("riotarmor / armor", "Puts on riot armor (REQUIRES GAMEPASS)", false) --
+ne("food / dinner", "Obtains food tray from cafeteria", false) --
+ne("guns / allguns", "Obtain all guns in the game", false) --
+ne("items / allitems", "Obtain all items (including clothes)", false) --
+ne("autoguns / aguns", "Automatically gives you guns", false) --
+ne("autoitems / aitems", "Automatically get all items/guns", false) --
+ne("infammo / infa", "Applies infinite ammo to gun (Must be equipped)", false) --
+ne("gunmods / opgun", "Applies all gun mods to the selected gun (Gun must be equipped)", false) --
+ne("autoinfammo / ainfa", "Automatically apply infinite ammo to all gun(s)", false) --
+ne("headshot / hshot", "Always headshot players even through walls", false) --
+ne("silentaim / saim", "Headshot but more legit and not go through walls", false) --
+
+ne("LOCAL CMDS", false, true) -- Local-only commands
+ne("autorespawn / autore [boolean]", "Toggles autorespawn to true or false", false) --
+ne("fly / flight [speed]", "Makes you or a car fly (GUI in mobile)", false) --
+ne("unfly / noflight", "Stops flying or stops car fly", false) --
+ne("speed [number]", "Changes your walkspeed", false) --
+ne("loopspeed / lspeed [number]", "Always changes your walkspeed to (Number)", false) --
+ne("noclip / noclip", "Ability to walk through walls like its nothing", false) --
+ne("jumppower / jump [number]", "Changes how high you jump", false) --
+ne("ljumppower / ljump [number]", "Always changes your jump-power to (Number)", false) --
+ne("unloopspeed / unlspeed", "Stops changing speed", false) --
+ne("unljumppower / unljump", "Stops changing jump-power", false) --
+ne("unnoclip / clip", "Disables the ability to walk through walls", false) --
+
+
+ne("POWERS/DEFENSE", false, true) --POWERS AND DEFENSE
+ne("onepunch / opunch", "One-punch any player.", false) --
+ne("oneshot / oshot", "One-shot players instantly", false) --
+ne("punchaura / paura", "Increases punch range to 15 studs", false) --
+ne("friendlyfire / ffire", "Automatically changes to a different team when shooting a teammate", false) --
+ne("antishoot / ashoot", "Shoots back player(s) who try to shoot you.", false) --
+ne("antipunch / apunch", "Any players who try to punch you dies", false) --
+ne("antiarrest / aar", "Prevents you from being arrested", false) --
+ne("antitase / atase", "Prevents you from being tased", false) --
+ne("antistun / moveable", "Automatically set walkspeed when frozen", false) --USELESS CMD?
+ne("refresharrest / rantiar", "Anti-arrest but refreshes your character instead", false)
+ne("refreshtase / ratase", "Anti-tase but refreshes your character instead", false)
+
+
+ne("GIVE CMDS", false, true) --GIVE COMMANDS
+ne("givecmds / gcmds [plr,random,all]", "Gives player(s) *admin* commands", false)
+ne("revokecmds / rcmds [plr,all]", "Removes/Revokes commands from player(s)", false)
+ne("givekey / gkey [plr]", "Gives player keycard", false)
+ne("givepower / gpw [PowerList.Name] [plr]", "Gives player(s) powers/defense", false) --
+ne("removepower / rpw [PowerList.Name,all] [plr,all]", "Removes power/defense from player.", false) --
+ne("PowerList \/", false, true) --List of all powers
+ne("onepunch / opunch [plr]", "Make them one-punch other player(s)", false) --
+ne("oneshot / oshot [plr]", "Make them one-shot other player(s)", false) --
+ne("punchaura / paura [plr]", "Increases a selected player(s) punch range.", false) --
+ne("antipunch / apunch [plr]", "If another player punches the selected player(s), they die.", false) --
+ne("antiarrest / aar [plr]", "If a guard pulls out a handcuff near the selected player(s), they die.", false) --
+ne("antitase / atase [plr]", "If a guard pulls out a taser near the selected player(s), they die.", false) --
+ne("antishoot / ashoot [plr]", "If someone shoots the selected player(s), they die.", false) --
+ne("friendlyfire / ffire [plr]", "Friendly-fire for the selected player(s)", false) --
+ne("EXAMPLE USAGE:", "givepower onepunch playername", false) -- for dumbass players who dont know how to use it :/
+
+ne("BRING / GOTO", false, true) --BRING / GOTO CMDS
+ne("goto / to [plr,random]", "Teleports you to a selected player.", false) --
+ne("bring [plr,random,all]", "Brings player(s) to your location", false) --
+ne("teleport / tp [plr1] [plr2]", "Teleports selected player1 to player2", false) --
+
+ne("MISC CMDS", false, true) -- MISCELLANEOUS
+ne("opendoors / doors [gate]", "Opens every door or gate", false) --
+ne("cars / scar", "Spawns a car to your location", false) --
+ne("carsto / scarto [plr,random]", "Spawns a car to a specific player.", false) --
+
+ne("TELEPORTS", false, true) --TELEPORT PLACE(S)
+ne("nexus / nex [plr or me]", "Teleports you (or a player) to the location: Nexus", false) --
+--Debug
+ne("DEBUG (DO NOT TOUCH)", false, true)
+ne("debugstop", "Stops all debug", false)
+ne("debug / deb [Instance.Name]", "executes debug from debug list (Do not touch)", false)
+ne("DEBUG LIST:", false, true)
+ne("deletecmdslist", "delete all frames in CMDS_List", false)
+ne("deletetogglelist", "delete all frames in Toggles_List", false)
+ne("addlist", "add list to CMDS_List", false)
+ne("category", "add category to CMDS_List", false)
+ne("toggle [action=print,warn,notify] [title] [description]", "add new toggle to Toggles_List", false)
+
+--[[ What are you doing here???
+local temp = {
+	testingok = false;
+};
+NewToggleList("HELLO", "SKIBIDI RIZZLER AMONG US", temp.testingok, function()
+	temp.testingok = not temp.testingok
+	return temp.testingok
+end)
+NewToggleList("TESTING", "DEBUG MODE ACTIVATED (REAL)", "click", function(arg)
+	local stri = tonumber(arg)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = stri
+	print("omg works")
+end, true)
+]]--
+
